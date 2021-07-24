@@ -11,4 +11,4 @@ RUN npm install
 # Push in app source
 COPY . /src
 
-CMD [ "npm","start" ]
+CMD [ "npm", "start" ]
