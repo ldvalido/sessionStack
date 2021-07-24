@@ -1,13 +1,14 @@
-FROM node:14-alpine
-RUN mkdir  -p /src
+FROM node:lts-alpine3.14
+
+# Create app directory
+RUN mkdir -p /src
 WORKDIR /src
 
-#install dep
-COPY package.json /src/
+# Install dependencies
+COPY package.json /src
 RUN npm install
 
-EXPOSE 5000
+# Push in app source
+COPY . /src
 
-#copy src
-COPY . .
-CMD ["npm", "start"]
+CMD [ "npm","start" ]
