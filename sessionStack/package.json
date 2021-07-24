@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2-runtime start app.js",
+    "start": "pm2-runtime start app.js -i max --max-memory-restart 80M ",
     "dev": "pm2-dev app.js"
   },
   "dependencies": {
